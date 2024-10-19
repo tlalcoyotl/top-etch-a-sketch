@@ -19,6 +19,13 @@ body {
     gap: 2em;
 }
 
+button#new-canvas {
+    display: block;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    font-size: 1.2em;
+}
+
 #container {
     background: #FFFFFF;
     width: 640px;
@@ -27,9 +34,13 @@ body {
     flex: 0 0 auto;
 }
 
-button#new-canvas {
-    display: block;
-    padding: 0.5em 1em;
-    border-radius: 8px;
-    font-size: 1.2em;
+#container div {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+}
+
+.cell {
+    border: 1px solid #F4F4F4;
+    flex: 1 0 0;
 }
