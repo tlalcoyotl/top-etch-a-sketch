@@ -1,0 +1,33 @@
+Create html boilerplate
+
+Make sure all CSS box-model is border-box to avoid tragedies
+
+Add container
+
+CSS container to display:flex with set width and height and make it not shrink with flex-shrink: 0
+
+Create javascript code to make 16x16 grid inside container
+>function to create grid
+>To do this you have to create a x rows and each row is a div that will contain each cell
+>>let num = number of rows and columns
+>Take a good look cause it's flexbox baby!
+
+Check if grid is working putting some borders on each element
+>Add classes to each grid cell and on CSS give them these borders
+>These classes will work later for Javascript manip
+
+>Javascript event mouseenter every square to change color when hovered on 
+>Make sure it stays on
+> Decide to use .class or backgorundColor
+
+Add button that will generate new grid
+>Click event makes prompt appear asking for input
+>Input number = new grid side
+>Input should be <= 100
+>Old grid disappears and generates new grid
+
+Extra:
+Randomize each square color
+Add CSS for class to randomize background color (do this in CSS not Javascript!)
+Each subsequent pass of mouse darkens the background color 10% until black at 10 passes
+Javascript that? or CSS? seems like javascript.....
