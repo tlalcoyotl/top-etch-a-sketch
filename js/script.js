@@ -1,9 +1,9 @@
-let initGrid = 16;
+let gridValue = 16;
 let container = document.getElementById('container');
 let button = document.querySelector('#new-canvas');
 let column;
 
-createGrid(initGrid);
+createGrid(gridValue);
 
 // Create Grid
 function createGrid(gridSize) {
@@ -20,7 +20,9 @@ function createGrid(gridSize) {
 
 // Function to change background of cell
 function gridPaint(e) {
-    e.target.style.backgroundColor = "#000000";
+    if (e.target.classList.contains('cell')){
+     e.target.style.backgroundColor = "#000000";
+    };
 }
 
 container.addEventListener('mouseover', gridPaint);
@@ -29,7 +31,11 @@ container.addEventListener('mouseover', gridPaint);
 
 function newGrid() {
     container.innerHTML = '';
-    createGrid(initGrid);
+    gridValue = parseInt(prompt('Enter new grid size less than 100!'));
+    while ((!Number.isInteger(gridValue)) || gridValue > 100) {
+        gridValue = parseInt(prompt('Enter new grid size NUMBER less than 100!'));        
+    }
+    createGrid(gridValue);
 }
 
 button.addEventListener('click', newGrid);
