@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #E4E4E4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#container {
+    background: #FFFFFF;
+    width: 640px;
+    height: 640px;
+    display: flex;
+    flex: 0 0 auto;
+}
+
+button#new-canvas {
+    display: block;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    font-size: 1.2em;
+}
