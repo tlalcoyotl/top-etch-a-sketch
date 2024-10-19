@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -10,20 +12,38 @@
 }
 
 body {
-    background: #E4E4E4;
+    background: #8377D1;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
     gap: 2em;
+    font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 900;
 }
 
 button#new-canvas {
     display: block;
     padding: 0.5em 1em;
+    border: none;
     border-radius: 8px;
     font-size: 1.2em;
+    background: #93bedf;
+    color: #ffffff;
+}
+
+button#new-canvas:hover {
+    background: #8ef9f3;
+    color: #000000;
+}
+
+button#new-canvas:active {
+    border: 1px solid #FFFFFF;
 }
 
 #container {

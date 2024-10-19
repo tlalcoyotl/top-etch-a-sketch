@@ -20,8 +20,16 @@ function createGrid(gridSize) {
 
 // Function to change background of cell
 function gridPaint(e) {
+    let currentOpacity = window.getComputedStyle(e.target).getPropertyValue('background-image');
+    console.log(currentOpacity);
     if (e.target.classList.contains('cell')){
-     e.target.style.backgroundColor = "#000000";
+        e.target.style.backgroundColor = randRGB();
+        if (currentOpacity == 'none'){
+            e.target.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))';
+        } else if (currentOpacity != 'none') {
+            let alpha = currentOpacity.slice(30, 33);
+            e.target.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, ${parseFloat(alpha) + 0.1}), rgba(0, 0, 0, ${parseFloat(alpha) + 0.1}))`;
+        }
     };
 }
 
@@ -39,3 +47,10 @@ function newGrid() {
 }
 
 button.addEventListener('click', newGrid);
+
+function randRGB() {
+    let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+    return `rgb(${r}, ${g}, ${b})`;
+}

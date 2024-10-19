@@ -1,14 +1,14 @@
-//Create html boilerplate
+Create html boilerplate
 
-//Make sure all CSS box-model is border-box to avoid tragedies
+Make sure all CSS box-model is border-box to avoid tragedies
 
-//Add container
+Add container
 
-//CSS container to display:flex with set width and height and make it not shrink with flex-shrink: 0
+CSS container to display:flex with set width and height and make it not shrink with flex-shrink: 0
 
 Create javascript code to make 16x16 grid inside container
 >function to create grid to use later
->To do this you have to create a x rows and each row is a div that will contain each cell
+>To do this you have to create a x column and each column is a div that will contain each cell
 >>let num = number of rows and columns
 >Take a good look cause it's flexbox baby!
 
